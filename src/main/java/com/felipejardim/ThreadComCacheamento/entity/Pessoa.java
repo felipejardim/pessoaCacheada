@@ -13,7 +13,7 @@ public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long idPeople;
+    private Long id;
 
     @Basic
     @Column(name = "nome")

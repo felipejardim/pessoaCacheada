@@ -21,6 +21,11 @@ public class PessoaController {
         return service.getListaDePessoas();
     }
 
+    @GetMapping("/{id}")
+    public Pessoa retornaPessoa(@PathVariable(value = "id") Long id){
+        return service.retornaUmaPessoa(id);
+    }
+
     @GetMapping("/att")
     public String AtualizarLista(){
         service.atualizaListaDePessoas();
@@ -30,6 +35,17 @@ public class PessoaController {
     @PostMapping("")
     public Pessoa criarPessoa(@RequestBody Pessoa pessoa ){
         return service.criarPessoa(pessoa);
+    }
+
+    @PutMapping("")
+    public Pessoa atualizarPessoa(@RequestBody Pessoa pessoa){
+        return service.alterarPessoa(pessoa);
+    }
+
+    @DeleteMapping("")
+    public String removerPessoa(@RequestBody Pessoa pessoa){
+        service.excluirPessoa(pessoa.getId());
+        return "Removido";
     }
 
     @PostConstruct                                                      //Faz o método rodar após aplicação ser montada
