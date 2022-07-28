@@ -23,10 +23,6 @@ public class pessoaService {
         this.listaDePessoas = repo.findAll();
     }
 
-    public List<Pessoa> listarPessoas(){
-        return listaDePessoas;
-    }
-
     public Pessoa criarPessoa(Pessoa p){
         return repo.save(p);
     }
