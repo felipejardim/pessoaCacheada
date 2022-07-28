@@ -38,27 +38,4 @@ public class PessoaController {
         Thread t = new Thread(runner);
         t.start();
     }
-
-
-
-
-    /*public void runner(){
-        TimerTask teste = new TimerTask() {
-            @Override
-            public void run() {
-                usainBoltCarteiro runner = new usainBoltCarteiro(service);
-                Thread t = new Thread(runner);
-                t.start();
-            }
-        };
-
-        Calendar h = Calendar.getInstance();
-        h.set(Calendar.DATE, new Date().getDate()+1);
-        h.set(Calendar.HOUR_OF_DAY, 18);
-        h.set(Calendar.MINUTE, 33);
-        h.set(Calendar.SECOND, 0);
-
-        Timer time = new Timer();
-        time.schedule(teste,new Date(h.toString()), 1000*60*60*24);
-    }*/
 }

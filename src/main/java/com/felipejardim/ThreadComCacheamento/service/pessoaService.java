@@ -4,13 +4,11 @@ import com.felipejardim.ThreadComCacheamento.entity.Pessoa;
 import com.felipejardim.ThreadComCacheamento.repository.pessoaRepository;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@Component
 public class pessoaService {
 
     @Autowired
